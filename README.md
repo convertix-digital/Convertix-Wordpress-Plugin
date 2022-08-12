@@ -1,4 +1,4 @@
-# Plugin Name: Convertix
+# Plugin Name: Convertix Pixel
 Contributors: convertix
 Tags: convertix, facebook, facebook-conversion-api, tiktok, google-analytics, google-adwords, instagram, conversion, conversion-api,adwords, analytics, server-side, container,
 Requires at least: 5.2.0
