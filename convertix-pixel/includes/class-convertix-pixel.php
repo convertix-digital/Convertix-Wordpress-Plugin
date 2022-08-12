@@ -202,17 +202,9 @@ class Convertix_Pixel {
 
 		$plugin_public = new Convertix_Pixel_Public( $this->get_convertix_pixel(), $this->get_version() );
 
-		//$this->loader->add_action( 'send_headers', $plugin_public, 'track_cookie_set' );
-
-		//$this->loader->add_action( 'wp_footer', $plugin_public, 'track_pageview' );
 		$this->loader->add_action( 'wp_head', $plugin_public, 'gtm_head' );
 
 		$this->loader->add_action( 'body_open', $plugin_public, 'gtm_body' );
-		//$this->loader->add_action( 'wp_body_open', $plugin_public, 'gtm_body' );
-		//$this->loader->add_action( 'genesis_before', $plugin_public, 'gtm_body' );
-		//$this->loader->add_action( 'tha_body_top', $plugin_public, 'gtm_body' );
-		//$this->loader->add_action( 'body_top', $plugin_public, 'gtm_body' );
-		//$this->loader->add_action( 'wp_footer', $plugin_public, 'gtm_body' );
 
 	}
 

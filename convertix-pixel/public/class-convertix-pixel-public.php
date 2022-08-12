@@ -62,12 +62,7 @@ class Convertix_Pixel_Public {
 			return;
 		}
 
-		echo "
-			<!-- Begin Convertix Pixel 
-			<script src=\"https://storage.googleapis.com/convertix/adblock-measure.js\"></script>
-			<script src=\"https://storage.googleapis.com/convertix/advertisement.js\"></script>
-			-->
-			<script>
+		echo "<script>
 			let fb_pixel1 = '". $this->get_option( META_PIXEL_ID_1 ) ."';
 			let fb_pixel_api1 = '". $this->get_option( META_PIXEL_TOKEN_API_1 ) ."';
 			let fb_pixel_testid1 = '". $this->get_option( META_PIXEL_TESTID_1 ) ."';
