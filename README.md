@@ -8,7 +8,7 @@ Requires at least: 5.9.3
 
 Tested up to: 6.0.1
 
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 
 License: GPLv2 or later
 
@@ -80,5 +80,5 @@ Meta Pixel (Facebook and Instagram), Google AdWords, Google Analytics 4, Tiktok 
 ## 1.0.13
 + Good name fixes for publishing plugin on wordpress.org
 
-## 1.0.14
+## 1.0.14 - 1.0.15
 * Fix input names to match variables name changes.

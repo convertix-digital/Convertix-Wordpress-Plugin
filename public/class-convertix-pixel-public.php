@@ -64,32 +64,32 @@ class Convertix_Pixel_Public {
 
 		echo "<!-- BEGIN Convertix Pixel -->
 			<script language=\"text/javascript\">
-			let fb_pixel1 = '". $this->get_option( META_PIXEL_ID_1 ) ."';
-			let fb_pixel_api1 = '". $this->get_option( META_PIXEL_TOKEN_API_1 ) ."';
-			let fb_pixel_testid1 = '". $this->get_option( META_PIXEL_TESTID_1 ) ."';
-			let fb_pixel2 = '". $this->get_option( META_PIXEL_ID_2 ) ."';
-			let fb_pixel_api2 = '". $this->get_option( META_PIXEL_TOKE_API_2 ) ."';
-			let fb_pixel_testid2 = '". $this->get_option( META_PIXEL_TESTID_2 ) ."';
+			let fb_pixel1 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_ID_1 ) ."';
+			let fb_pixel_api1 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_1 ) ."';
+			let fb_pixel_testid1 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_TESTID_1 ) ."';
+			let fb_pixel2 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_ID_2 ) ."';
+			let fb_pixel_api2 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_TOKE_API_2 ) ."';
+			let fb_pixel_testid2 = '". $this->get_option( CONVERTIX_PIXEL_META_PIXEL_TESTID_2 ) ."';
 				
-			let ga_pixel1 = '". $this->get_option( GOOGLE_UNIVERSAL_ANALYTICS_1 ) ."';
-			let ga4_pixel1 = '". $this->get_option( GOOGLE_ANALYTICS4_1 ) ."';
-			let gads_conversionID1 = '". $this->get_option( GOOGLE_ADWORDS_ID_1 ) ."';
-			let gads_remarketing = 'AW-". $this->get_option( GOOGLE_ADWORDS_ID_1 ) ."';
-			let ggOptimize = '". $this->get_option( GOOGLE_OPTIMIZE_1 ) ."';
+			let ga_pixel1 = '". $this->get_option( CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1 ) ."';
+			let ga4_pixel1 = '". $this->get_option( CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1 ) ."';
+			let gads_conversionID1 = '". $this->get_option( CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1 ) ."';
+			let gads_remarketing = 'AW-". $this->get_option( CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1 ) ."';
+			let ggOptimize = '". $this->get_option( CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1 ) ."';
 				
-			let ttk_pixel1 = '". $this->get_option( TIKTOK_PIXEL_1 ) ."';
-			let ttk_pixel_api1 = '". $this->get_option( TIKTOK_PIXEL_TOKEN_API_1 ) ."';
-			let ttk_pixel_testid1 = '". $this->get_option( TIKTOK_PIXEL_TESTID_1 ) ."';
+			let ttk_pixel1 = '". $this->get_option( CONVERTIX_PIXEL_TIKTOK_PIXEL_1 ) ."';
+			let ttk_pixel_api1 = '". $this->get_option( CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1 ) ."';
+			let ttk_pixel_testid1 = '". $this->get_option( CONVERTIX_PIXEL_TIKTOK_PIXEL_TESTID_1 ) ."';
 				
-			let in_pixel1 = '". $this->get_option( LINKEDIN_INSIGHT_TAG_1 ) ."';
+			let in_pixel1 = '". $this->get_option( CONVERTIX_PIXEL_LINKEDIN_INSIGHT_TAG_1 ) ."';
 				
 			let activecampaign_pixel = '". $this->get_option( ACTIVECAMPAIGN_PIXEL_1 ) ."';
 			let activecampaign_eventKey = '". $this->get_option( ACTIVECAMPAIGN_EVENTKEY_1 ) ."';
 				
 			let transportURLServer = '". $this->get_option( CONVERTIX_PIXEL_SERVER_CONTAINER_URL ) ."';
-			let cli_GTMevent = '". $this->get_option( CONVERTIX_CLIENT_EVENT ) ."';
-			let cli_GTMVariable = '". md5( $this->get_option( CONVERTIX_CLIENT_VARIABLE ) ) ."';
-			let convertix_token = '". $this->get_option( CONVERTIX_CLIENT_TOKEN ) ."';
+			let cli_GTMevent = '". $this->get_option( CONVERTIX_PIXEL_CLIENT_EVENT ) ."';
+			let cli_GTMVariable = '". md5( $this->get_option( CONVERTIX_PIXEL_CLIENT_VARIABLE ) ) ."';
+			let convertix_token = '". $this->get_option( CONVERTIX_PIXEL_CLIENT_TOKEN ) ."';
 
 			let gtm_cli_container = '". esc_js( $this->get_option( CONVERTIX_PIXEL_WEB_CONTAINER_ID ) ) ."';
 			let gtm_convertix_container = 'GTM-TBC3PNT';
@@ -100,7 +100,8 @@ class Convertix_Pixel_Public {
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" . esc_js( $this->get_option( CONVERTIX_PIXEL_WEB_CONTAINER_ID ) ) . "');
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBC3PNT');
 			</script>
-			<!-- End Convertix Pixel -->";
+			<!-- End Convertix Pixel -->
+		";
 	}
 
 	/**
