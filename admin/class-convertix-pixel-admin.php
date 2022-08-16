@@ -310,112 +310,112 @@ class Convertix_Pixel_Admin {
 			return;
 		}
 
-		if ( META_PIXEL_ID_1 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_ID_1 === $id ) {
 
 			echo '<input type="number" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( META_PIXEL_TOKEN_API_1 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_1 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( META_PIXEL_TESTID_1 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_TESTID_1 === $id ) {
 
 			echo '<input type="text" pattern="TEST.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( META_PIXEL_ID_2 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_ID_2 === $id ) {
 
 			echo '<input type="number" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( META_PIXEL_TOKEN_API_2 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_2 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( META_PIXEL_TESTID_2 === $id ) {
+		if ( CONVERTIX_PIXEL_META_PIXEL_TESTID_2 === $id ) {
 
 			echo '<input type="text" pattern="TEST.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( GOOGLE_UNIVERSAL_ANALYTICS_1 === $id ) {
+		if ( CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1 === $id ) {
 			
 			echo '<input type="text" pattern="UA-.*" namename="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( GOOGLE_ANALYTICS4_1 === $id ) {
+		if ( CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1 === $id ) {
 
 			echo '<input type="text" pattern="G-.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( GOOGLE_ADWORDS_ID_1 === $id ) {
+		if ( CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1 === $id ) {
 
 			echo '<input type="number" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( GOOGLE_OPTIMIZE_1 === $id ) {
+		if ( CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1 === $id ) {
 
 			echo '<input type="text" pattern="OPT-.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( TIKTOK_PIXEL_1 === $id ) {
+		if ( CONVERTIX_PIXEL_TIKTOK_PIXEL_1 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( TIKTOK_PIXEL_TOKEN_API_1 === $id ) {
+		if ( CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( TIKTOK_PIXEL_TESTID_1 === $id ) {
+		if ( CONVERTIX_PIXEL_TIKTOK_PIXEL_TESTID_1 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( LINKEDIN_INSIGHT_TAG_1 === $id ) {
+		if ( CONVERTIX_PIXEL_LINKEDIN_INSIGHT_TAG_1 === $id ) {
 
 			echo '<input type="number" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( ACTIVECAMPAIGN_PIXEL_1 === $id ) {
+		if ( CONVERTIX_PIXEL_ACTIVECAMPAIGN_PIXEL_1 === $id ) {
 
 			echo '<input type="number" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( ACTIVECAMPAIGN_EVENTKEY_1 === $id ) {
+		if ( CONVERTIX_PIXEL_ACTIVECAMPAIGN_EVENTKEY_1 === $id ) {
 
 			echo '<input type="text" pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
@@ -429,21 +429,21 @@ class Convertix_Pixel_Admin {
 			return;
 		}
 
-		if ( CONVERTIX_CLIENT_EVENT === $id ) {
+		if ( CONVERTIX_PIXEL_CLIENT_EVENT === $id ) {
 
 			echo '<input type="text" required pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( CONVERTIX_CLIENT_VARIABLE === $id ) { // Evento do Cliente com HASH MD5
+		if ( CONVERTIX_PIXEL_CLIENT_VARIABLE === $id ) { // Evento do Cliente com HASH MD5
 
 			echo '<input type="text" required pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( md5( $this->get_option( CONVERTIX_CLIENT_EVENT ) ) )  . '" disabled/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
 
-		if ( CONVERTIX_CLIENT_TOKEN === $id ) {
+		if ( CONVERTIX_PIXEL_CLIENT_TOKEN === $id ) {
 
 			echo '<input type="text" required pattern=".*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 

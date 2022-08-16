@@ -10,7 +10,7 @@
  * Plugin Name:       Convertix Pixel
  * Plugin URI:        https://convertix.digital/wp-plugin/
  * Description:       Convertix Pixel Integration
- * Version:           1.0.13
+ * Version:           1.0.14
  * Author:            Convertix
  * Author URI:        https://convertix.digital
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'CONVERTIX_PIXEL_VERSION', '1.0.13' );
+define( 'CONVERTIX_PIXEL_VERSION', '1.0.14' );
 
 /**
  * The code that runs during plugin activation.
