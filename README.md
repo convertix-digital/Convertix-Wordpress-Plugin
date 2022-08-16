@@ -1,9 +1,9 @@
 # Plugin Name: Convertix Pixel
 Contributors: convertix
 Tags: convertix, facebook, facebook-conversion-api, tiktok, google-analytics, google-adwords, instagram, conversion, conversion-api,adwords, analytics, server-side, container,
-Requires at least: 5.2.0
-Tested up to: 5.9.3
-Stable tag: 1.0.0
+Requires at least: 5.9.3
+Tested up to: 6.0.1
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,12 +41,34 @@ Please refer to the description of <a href="https://convertix.digital/">Converti
 
 Meta Pixel (Facebook and Instagram), Google AdWords, Google Analytics 4, Tiktok Pixel, LinkedIn Insight Tag, ActiveCampaign Pixel, and much more to come.
 
-== Screenshots ==
+# Screenshots
 
 1. Plugin settings.
 2. Menu item in the settings panel.
 
-== Changelog ==
+# Changelog
 
-= 1.0.0 =
-* Init release.
+## 1.0.0
+* Initial release.
+
+## 1.0.1
++ Includes Meta and Google Pixel
+
+## 1.0.2
++ Includes Convertix Pixel
+
+## 1.0.3
++ Solved issue with interface
+
+## 1.0.4 - 1.0.10
++ Included all pixels
+* automatic calculation for Convertix Variable
+
+## 1.0.11
++ Included On/Off Plugin
+
+## 1.0.12
+* Off Code only for testing purposes
+
+## 1.0.13
++ Good name fixes for publishing plugin on wordpress.org

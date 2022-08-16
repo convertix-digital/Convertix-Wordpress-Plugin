@@ -57,12 +57,13 @@ class Convertix_Pixel_Public {
 	 *
 	 * @return void
 	 */
-	public function gtm_head() {
+	public function ctx_head() {
 		if ( $this->is_convertix_off() ) {
 			return;
 		}
 
-		echo "<script>
+		echo "<!-- BEGIN Convertix Pixel -->
+			<script language=\"text/javascript\">
 			let fb_pixel1 = '". $this->get_option( META_PIXEL_ID_1 ) ."';
 			let fb_pixel_api1 = '". $this->get_option( META_PIXEL_TOKEN_API_1 ) ."';
 			let fb_pixel_testid1 = '". $this->get_option( META_PIXEL_TESTID_1 ) ."';
@@ -99,8 +100,7 @@ class Convertix_Pixel_Public {
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" . esc_js( $this->get_option( CONVERTIX_PIXEL_WEB_CONTAINER_ID ) ) . "');
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TBC3PNT');
 			</script>
-			<!-- End Convertix Pixel -->
-		";
+			<!-- End Convertix Pixel -->";
 	}
 
 	/**
@@ -108,7 +108,7 @@ class Convertix_Pixel_Public {
 	 *
 	 * @return void
 	 */
-	public function gtm_body() {
+	public function ctx_body() {
 		// Make sure we only print the noscript tag once.
 		// This is because we're trying for multiple hooks.
 		if ( self::$printed_noscript_tag ) {
@@ -126,58 +126,6 @@ class Convertix_Pixel_Public {
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBC3PNT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<!-- End Convertix Pixel (noscript) -->
 		';
-	}
-
-	/**
-	 * Get url.
-	 *
-	 * @return string
-	 */
-	private function get_url() {
-		if ( isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
-			return ( isset( $_SERVER['HTTPS'] ) ? 'https' : 'http' ) . '://' . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) . sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) );
-		}
-
-		return '';
-	}
-
-	/**
-	 * Get user agent.
-	 *
-	 * @return string
-	 */
-	private function get_user_agent() {
-		$useragent = 'not_set';
-		if ( isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
-			$useragent = sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) );
-		}
-
-		return $useragent;
-	}
-
-	/**
-	 * Get IP.
-	 *
-	 * @return string
-	 */
-	private function get_ip() {
-		$ipaddress = '0.0';
-		$keys      = array(
-			'HTTP_CLIENT_IP',
-			'HTTP_X_FORWARDED_FOR',
-			'HTTP_X_FORWARDED',
-			'HTTP_FORWARDED_FOR',
-			'HTTP_FORWARDED',
-			'REMOTE_ADDR',
-		);
-		foreach ( $keys as $k ) {
-			if ( isset( $_SERVER[ $k ] ) && ! empty( sanitize_text_field( wp_unslash( $_SERVER[ $k ] ) ) ) && filter_var( sanitize_text_field( wp_unslash( $_SERVER[ $k ] ) ), FILTER_VALIDATE_IP ) ) {
-				$ipaddress = sanitize_text_field( wp_unslash( $_SERVER[ $k ] ) );
-				break;
-			}
-		}
-
-		return $ipaddress;
 	}
 
 	/**

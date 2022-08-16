@@ -23,31 +23,31 @@ define( 'CONVERTIX_PIXEL_ADMIN_OPTIONS', 'convertix-pixel-admin-options' );
 define( 'CONVERTIX_PIXEL_ADMIN_GROUP', 'convertix-pixel-admin-group' );
 define( 'CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL', 'convertix-pixel-admin-group-general' );
 
-define( 'META_PIXEL_ID_1 ', 'convertix-pixel-fb_pixel1' );
-define( 'META_PIXEL_TOKEN_API_1 ', 'convertix-pixel-fb_pixel_api1' );
-define( 'META_PIXEL_TESTID_1 ', 'convertix-pixel-fb_pixel_testid1' );
-define( 'META_PIXEL_ID_2 ', 'convertix-pixel-fb_pixel2' );
-define( 'META_PIXEL_TOKEN_API_2 ', 'convertix-pixel-fb_pixel_api2' );
-define( 'META_PIXEL_TESTID_2 ', 'convertix-pixel-fb_pixel_testid2' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_ID_1 ', 'convertix-pixel-fb_pixel1' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_1 ', 'convertix-pixel-fb_pixel_api1' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_TESTID_1 ', 'convertix-pixel-fb_pixel_testid1' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_ID_2 ', 'convertix-pixel-fb_pixel2' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_2 ', 'convertix-pixel-fb_pixel_api2' );
+define( 'CONVERTIX_PIXEL_META_PIXEL_TESTID_2 ', 'convertix-pixel-fb_pixel_testid2' );
 
-define( 'GOOGLE_UNIVERSAL_ANALYTICS_1 ', 'convertix-pixel-ga_pixel1' );
-define( 'GOOGLE_ANALYTICS4_1 ', 'convertix-pixel-ga4_pixel1' );
-define( 'GOOGLE_ADWORDS_ID_1 ', 'convertix-pixel-gads_conversionID1' );
-define( 'GOOGLE_OPTIMIZE_1 ', 'convertix-pixel-ggOptimize' );
+define( 'CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1 ', 'convertix-pixel-ga_pixel1' );
+define( 'CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1 ', 'convertix-pixel-ga4_pixel1' );
+define( 'CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1 ', 'convertix-pixel-gads_conversionID1' );
+define( 'CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1 ', 'convertix-pixel-ggOptimize' );
 
-define( 'TIKTOK_PIXEL_1 ', 'convertix-pixel-ttk_pixel1' );
-define( 'TIKTOK_PIXEL_TOKEN_API_1 ', 'convertix-pixel-ttk_pixel_api1' );
-define( 'TIKTOK_PIXEL_TESTID_1 ', 'convertix-pixel-ttk_pixel_testid1' );
+define( 'CONVERTIX_PIXEL_TIKTOK_PIXEL_1 ', 'convertix-pixel-ttk_pixel1' );
+define( 'CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1 ', 'convertix-pixel-ttk_pixel_api1' );
+define( 'CONVERTIX_PIXEL_TIKTOK_PIXEL_TESTID_1 ', 'convertix-pixel-ttk_pixel_testid1' );
 
-define( 'LINKEDIN_INSIGHT_TAG_1 ', 'convertix-pixel-in_pixel1' );
+define( 'CONVERTIX_PIXEL_LINKEDIN_INSIGHT_TAG_1 ', 'convertix-pixel-in_pixel1' );
 
-define( 'ACTIVECAMPAIGN_PIXEL_1 ', 'convertix-pixel-activecampaign_pixel' );
-define( 'ACTIVECAMPAIGN_EVENTKEY_1 ', 'convertix-pixel-activecampaign_eventKey' );
+define( 'CONVERTIX_PIXEL_ACTIVECAMPAIGN_PIXEL_1 ', 'convertix-pixel-activecampaign_pixel' );
+define( 'CONVERTIX_PIXEL_ACTIVECAMPAIGN_EVENTKEY_1 ', 'convertix-pixel-activecampaign_eventKey' );
 
 define( 'CONVERTIX_PIXEL_SERVER_CONTAINER_URL ', 'convertix-pixel-transportURLServer' );
-define( 'CONVERTIX_CLIENT_EVENT ', 'convertix-pixel-cli_GTMevent' );
-define( 'CONVERTIX_CLIENT_VARIABLE ', 'convertix-pixel-cli_GTMVariable' );
-define( 'CONVERTIX_CLIENT_TOKEN ', 'convertix-pixel-convertix_token' );
+define( 'CONVERTIX_PIXEL_CLIENT_EVENT ', 'convertix-pixel-cli_GTMevent' );
+define( 'CONVERTIX_PIXEL_CLIENT_VARIABLE ', 'convertix-pixel-cli_GTMVariable' );
+define( 'CONVERTIX_PIXEL_CLIENT_TOKEN ', 'convertix-pixel-convertix_token' );
 
 define( 'CONVERTIX_PIXEL_WEB_CONTAINER_ID ', 'convertix-pixel-gtm_cli_container' );
 
@@ -202,9 +202,9 @@ class Convertix_Pixel {
 
 		$plugin_public = new Convertix_Pixel_Public( $this->get_convertix_pixel(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_head', $plugin_public, 'gtm_head' );
+		$this->loader->add_action( 'wp_head', $plugin_public, 'ctx_head' );
 
-		$this->loader->add_action( 'body_open', $plugin_public, 'gtm_body' );
+		$this->loader->add_action( 'body_open', $plugin_public, 'ctx_body' );
 
 	}
 

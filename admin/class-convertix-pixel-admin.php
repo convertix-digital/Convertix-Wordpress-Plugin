@@ -40,193 +40,193 @@ class Convertix_Pixel_Admin {
 		);
 
 		add_settings_field(
-			META_PIXEL_ID_1,
+			CONVERTIX_PIXEL_META_PIXEL_ID_1,
 			__( 'Meta Pixel (Facebook Pixel) 1', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_ID_1,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_ID_1,
 				'description' => __( 'Digite seu Meta Pixel (Facebook Pixel) primário. Somente números, por exemplo: 1234567890987654', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			META_PIXEL_TOKEN_API_1,
+			CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_1,
 			__( 'Meta Pixel (Facebook Pixel) Token API 1', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_TOKEN_API_1,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_1,
 				'description' => __( 'Digite seu Token API Meta Pixel (Facebook Pixel) primário. Pode conter números e letras em MAIÚSCULO.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			META_PIXEL_TESTID_1,
+			CONVERTIX_PIXEL_META_PIXEL_TESTID_1,
 			__( 'Meta Pixel (Facebook Pixel) TEST ID 1', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_TESTID_1,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_TESTID_1,
 				'description' => __( 'Digite seu TEST ID da Meta Pixel (Facebook Pixel) primário. Pode conter números e letras em MAIÚSCULO. <i>Use somente para testes de eventos e primeira instalação</i>.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			META_PIXEL_ID_2,
+			CONVERTIX_PIXEL_META_PIXEL_ID_2,
 			__( 'Meta Pixel (Facebook Pixel) 2', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_ID_2,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_ID_2,
 				'description' => __( 'Digite seu Meta Pixel (Facebook Pixel) secundário. Somente números, por exemplo: 2234567890987654', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			META_PIXEL_TOKEN_API_2,
+			CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_2,
 			__( 'Meta Pixel (Facebook Pixel) Token API 2', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_TOKEN_API_2,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_TOKEN_API_2,
 				'description' => __( 'Digite seu Token API Meta Pixel (Facebook Pixel) secundário. Pode conter números e letras em MAIÚSCULO.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			META_PIXEL_TESTID_2,
+			CONVERTIX_PIXEL_META_PIXEL_TESTID_2,
 			__( 'Meta Pixel (Facebook Pixel) TEST ID 2', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => META_PIXEL_TESTID_2,
+				'label_for'   => CONVERTIX_PIXEL_META_PIXEL_TESTID_2,
 				'description' => __( 'Digite seu TEST ID da Meta Pixel (Facebook Pixel) secundário. Pode conter números e letras em MAIÚSCULO. <i>Use somente para testes de eventos e primeira instalação</i>.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			GOOGLE_UNIVERSAL_ANALYTICS_1,
+			CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1,
 			__( 'Google Universal Analytics', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => GOOGLE_UNIVERSAL_ANALYTICS_1,
+				'label_for'   => CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1,
 				'description' => __( 'Formato válido: UA-XXXXXXXXX-X. Onde X pode ser numeros. Por exemplo: UA-123456789-1.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			GOOGLE_ANALYTICS4_1,
+			CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1,
 			__( 'Google Analytics 4', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => GOOGLE_ANALYTICS4_1,
+				'label_for'   => CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1,
 				'description' => __( 'Formato válido: G-XXXXXXXXX. Onde X pode ser numeros ou letras em MAIÚSCULO. Por exemplo: G-1A2B3C4D5.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			GOOGLE_ADWORDS_ID_1,
+			CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1,
 			__( 'Google AdWords Conversion ID "AW-"', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => GOOGLE_ADWORDS_ID_1,
+				'label_for'   => CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1,
 				'description' => __( 'Formato válido: AW-XXXXXXXXX. Onde X pode ser números. Você deve digitar somente a parte numérica.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			GOOGLE_OPTIMIZE_1,
+			CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1,
 			__( 'Google Optimize', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => GOOGLE_OPTIMIZE_1,
+				'label_for'   => CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1,
 				'description' => __( 'Formato válido: OPT-XXXXXX. Onde X pode ser numeros ou letras em MAIÚSCULO. Por exemplo: OPT-1A2B3C.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			TIKTOK_PIXEL_1,
+			CONVERTIX_PIXEL_TIKTOK_PIXEL_1,
 			__( 'Tiktok Pixel (Developer)', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => TIKTOK_PIXEL_1,
+				'label_for'   => CONVERTIX_PIXEL_TIKTOK_PIXEL_1,
 				'description' => __( 'Digite seu Tiktok Pixel (Somente a versão developer). Pode conter números e letras em MAIÚSCULO.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			TIKTOK_PIXEL_TOKEN_API_1,
+			CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1,
 			__( 'Tiktok Token API', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => TIKTOK_PIXEL_TOKEN_API_1,
+				'label_for'   => CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1,
 				'description' => __( 'Digite seu Tiktok Token API. Pode conter números e letras em MAIÚSCULO.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			TIKTOK_PIXEL_TESTID_1,
+			CONVERTIX_PIXEL_TIKTOK_PIXEL_TESTID_1,
 			__( 'Tiktok Pixel TESTID', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => TIKTOK_PIXEL_TESTID_1,
+				'label_for'   => CONVERTIX_PIXEL_TIKTOK_PIXEL_TESTID_1,
 				'description' => __( 'Digite seu TEST ID do Tiktok Pixel. Pode conter números e letras em MAIÚSCULO. <i>Use somente para testes de eventos e primeira instalação</i>.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			LINKEDIN_INSIGHT_TAG_1,
+			CONVERTIX_PIXEL_LINKEDIN_INSIGHT_TAG_1,
 			__( 'LinkedIn Insight Tag', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => LINKEDIN_INSIGHT_TAG_1,
+				'label_for'   => CONVERTIX_PIXEL_LINKEDIN_INSIGHT_TAG_1,
 				'description' => __( 'Digite seu LinkedIn Insight Tag. Pode conter números.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			ACTIVECAMPAIGN_PIXEL_1,
+			CONVERTIX_PIXEL_ACTIVECAMPAIGN_PIXEL_1,
 			__( 'ActiveCampaign Tracking Code', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => ACTIVECAMPAIGN_PIXEL_1,
+				'label_for'   => CONVERTIX_PIXEL_ACTIVECAMPAIGN_PIXEL_1,
 				'description' => __( 'Digite seu ActiveCampaign Tracking Code. Pode conter números.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			ACTIVECAMPAIGN_EVENTKEY_1,
+			CONVERTIX_PIXEL_ACTIVECAMPAIGN_EVENTKEY_1,
 			__( 'ActiveCampaign Event Key', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => ACTIVECAMPAIGN_EVENTKEY_1,
+				'label_for'   => CONVERTIX_PIXEL_ACTIVECAMPAIGN_EVENTKEY_1,
 				'description' => __( 'Digite seu ActiveCampaign Event Key. Pode conter números e letras em minúsculo.', 'convertix-pixel' ),
 			)
 		);
@@ -244,37 +244,37 @@ class Convertix_Pixel_Admin {
 		);
 
 		add_settings_field(
-			CONVERTIX_CLIENT_EVENT,
+			CONVERTIX_PIXEL_CLIENT_EVENT,
 			__( 'Evento Pessoal Convertix', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => CONVERTIX_CLIENT_EVENT,
+				'label_for'   => CONVERTIX_PIXEL_CLIENT_EVENT,
 				'description' => __( 'Digite o evento único cadastrado em sua conta. Você recebeu junto com seu acesso.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			CONVERTIX_CLIENT_VARIABLE,
+			CONVERTIX_PIXEL_CLIENT_VARIABLE,
 			__( 'Variável Única de Validação', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => CONVERTIX_CLIENT_VARIABLE,
+				'label_for'   => CONVERTIX_PIXEL_CLIENT_VARIABLE,
 				'description' => __( 'Variável única usada para acessar as funcionalidades convertix.', 'convertix-pixel' ),
 			)
 		);
 
 		add_settings_field(
-			CONVERTIX_CLIENT_TOKEN,
+			CONVERTIX_PIXEL_CLIENT_TOKEN,
 			__( 'Chave de Ativação (Token Convertix)', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
 			CONVERTIX_PIXEL_ADMIN_SLUG,
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
-				'label_for'   => CONVERTIX_CLIENT_TOKEN,
+				'label_for'   => CONVERTIX_PIXEL_CLIENT_TOKEN,
 				'description' => __( 'Token de validação da conta Convertix', 'convertix-pixel' ),
 			)
 		);
