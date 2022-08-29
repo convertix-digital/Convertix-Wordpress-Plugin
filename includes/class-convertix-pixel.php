@@ -34,6 +34,7 @@ define( 'CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1 ', 'convertix-pixel-ga_pix
 define( 'CONVERTIX_PIXEL_GOOGLE_ANALYTICS4_1 ', 'convertix-pixel-ga4_pixel1' );
 define( 'CONVERTIX_PIXEL_GOOGLE_ADWORDS_ID_1 ', 'convertix-pixel-gads_conversionID1' );
 define( 'CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1 ', 'convertix-pixel-ggOptimize' );
+define( 'CONVERTIX_PIXEL_GOOGLE_ANTIFLICKERING_1 ', 'convertix-pixel-optimizeAntiFlickering' );
 
 define( 'CONVERTIX_PIXEL_TIKTOK_PIXEL_1 ', 'convertix-pixel-ttk_pixel1' );
 define( 'CONVERTIX_PIXEL_TIKTOK_PIXEL_TOKEN_API_1 ', 'convertix-pixel-ttk_pixel_api1' );
@@ -90,6 +91,15 @@ class Convertix_Pixel {
 	protected $version;
 
 	/**
+	 * The Convertix Container.
+	 *
+	 * @since    1.4.0
+	 * @access   protected
+	 * @var      string Convertix Container's Name.
+	 */
+	protected $convertix_container;
+
+	/**
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
@@ -105,6 +115,7 @@ class Convertix_Pixel {
 			$this->version = '1.0.1';
 		}
 		$this->convertix_pixel = 'convertix-pixel';
+		$this->convertix_container = 'GTM-TBC3PNT';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -200,7 +211,7 @@ class Convertix_Pixel {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Convertix_Pixel_Public( $this->get_convertix_pixel(), $this->get_version() );
+		$plugin_public = new Convertix_Pixel_Public( $this->get_convertix_pixel(), $this->get_version(), $this->get_convertix_container() );
 
 		$this->loader->add_action( 'wp_head', $plugin_public, 'ctx_head' );
 
@@ -226,6 +237,17 @@ class Convertix_Pixel {
 	 */
 	public function get_convertix_pixel() {
 		return $this->convertix_pixel;
+	}
+
+	/**
+	 * The Container's name used to identify it within the context of Convertix
+	 * and to define which environment the user is on (testing, development or live).
+	 *
+	 * @return    string    The Convertix container's name.
+	 * @since     1.4.0
+	 */
+	public function get_convertix_container() {
+		return $this->convertix_container;
 	}
 
 	/**

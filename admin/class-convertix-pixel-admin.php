@@ -160,6 +160,18 @@ class Convertix_Pixel_Admin {
 		);
 
 		add_settings_field(
+			CONVERTIX_PIXEL_GOOGLE_ANTIFLICKERING_1,
+			__( 'Google Anti-Flickering (snippet antioscilação)', 'convertix-pixel' ),
+			array( $this, 'input_callback_function' ),
+			CONVERTIX_PIXEL_ADMIN_SLUG,
+			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
+			array(
+				'label_for'   => CONVERTIX_PIXEL_GOOGLE_ANTIFLICKERING_1,
+				'description' => __( 'Deseja adicionar o snippet de antioscilação? Faça isso, somente após ler o site: https://support.google.com/optimize/answer/7100284?hl=pt-BR', 'convertix-pixel' ),
+			)
+		);
+
+		add_settings_field(
 			CONVERTIX_PIXEL_TIKTOK_PIXEL_1,
 			__( 'Tiktok Pixel (Developer)', 'convertix-pixel' ),
 			array( $this, 'input_callback_function' ),
@@ -239,7 +251,7 @@ class Convertix_Pixel_Admin {
 			CONVERTIX_PIXEL_ADMIN_GROUP_GENERAL,
 			array(
 				'label_for'   => CONVERTIX_PIXEL_SERVER_CONTAINER_URL,
-				'description' => __( 'Digite a sua URL Convertix. Por exemplo: https://ctx.example.com', 'convertix-pixel' ),
+				'description' => __( 'Digite a sua URL Convertix. O valor não pode terminar com "/" Por exemplo: https://ctx.example.com', 'convertix-pixel' ),
 			)
 		);
 
@@ -354,7 +366,7 @@ class Convertix_Pixel_Admin {
 
 		if ( CONVERTIX_PIXEL_GOOGLE_UNIVERSAL_ANALYTICS_1 === $id ) {
 			
-			echo '<input type="text" pattern="UA-.*" namename="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
+			echo '<input type="text" pattern="UA-.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
 
 			return;
 		}
@@ -376,6 +388,13 @@ class Convertix_Pixel_Admin {
 		if ( CONVERTIX_PIXEL_GOOGLE_OPTIMIZE_1 === $id ) {
 
 			echo '<input type="text" pattern="OPT-.*" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="' . esc_attr( $this->get_option( $id ) ) . '"/><br />' . esc_html( $data['description'] );
+
+			return;
+		}
+
+		if ( CONVERTIX_PIXEL_GOOGLE_ANTIFLICKERING_1 === $id ) {
+
+			echo '<input type="checkbox" name="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']" id="' . esc_attr( $id ) . '" class="set-width" value="Anti-Flickering-ON"/ ';if($this->get_option( CONVERTIX_PIXEL_GOOGLE_ANTIFLICKERING_1 )) {echo 'checked';} echo ' ><label for="' . esc_attr( CONVERTIX_PIXEL_ADMIN_OPTIONS ) . '[' . esc_attr( $id ) . ']"> Ligar o snipet antioscilação</label><br />' . esc_html( $data['description'] );
 
 			return;
 		}
